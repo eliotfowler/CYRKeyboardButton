@@ -219,8 +219,6 @@ NSString *const CYRKeyboardButtonKeyPressedKey = @"CYRKeyboardButtonKeyPressedKe
 
 - (void)setTextInput:(id<UIKeyInput>)textInput
 {
-    NSAssert([textInput conformsToProtocol:@protocol(UITextInput)], @"<CYRKeyboardButton> The text input object must conform to the UITextInput protocol!");
-    
     [self willChangeValueForKey:NSStringFromSelector(@selector(textInput))];
     _textInput = textInput;
     [self didChangeValueForKey:NSStringFromSelector(@selector(textInput))];
